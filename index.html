@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+
 <html>
     
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <meta name="format-detection" content="telephone=no">
-	<title>收集能量</title>
         <link href="yyf.css" rel="stylesheet">
         <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
         <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular-animate.min.js"></script>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="cuteTMZ" id="shu" ng-class="{true: 'a-swing'}[isshow]">
                     <img src="https://i.loli.net/2021/09/09/bFAKC8VZO29BNdQ.png">
-                
+                </div>
                 <div ng-repeat="item in qplist track by $index">
                     <div class="huluBo bottle-fade1" style="{{item.style}}" id="bottle{{$index+1}}"
                     ng-click="qpclick('bottle',$index+1,item.operation)">
@@ -29,6 +29,7 @@
                 </div>
             </div>
         <script>
+
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function($scope, $timeout) {
                 //顶部气泡每次最多展示五个 气泡截取
