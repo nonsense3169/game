@@ -9,19 +9,19 @@
         <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
         <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular-animate.min.js"></script>
 		<style>
+		
 		.at-floating-card {
 				z-index: 999999;
 				position: fixed;
-				bottom: 20px;
+				bottom: 0px;
 				display: flex;
 				align-items: center;
 				flex-direction: row;
 				background: #FFFFFF;
-				width: 90%;
+				width: 100%;
 				border: 1px solid #EEEEEE;
 				border-radius: 2px;
 				box-shadow: 0 4px 12px rgba(#000, 0.12);
-				margin: 0 0 0 20px;
 				padding: 30px 20px;
 				font-family: 'Open Sans', sans-serif;
 				-webkit-font-smoothing: antialiased;
@@ -133,26 +133,23 @@
 	}
 		</style>
     </head>
-    
+	
+    <div class="at-floating-card">
+		<div class="at-floating-card__thumbnail" style="width: 80px;max-width: 80px;min-width: 80px;border: 1px solid #EEEEEE;border-radius: 100%;margin: 0 20px 0 0;padding: 4px;box-sizing: border-box;overflow: hidden;">
+			<img src="https://i.loli.net/2021/09/12/uC3m8SYisTfXODj.png" alt="image"  style="display: block;width: 100%;max-width: 100%;border-radius: 100%;">
+		</div>
+		<div class="at-floating-card__content">
+			<h2 class="at-floating-card__title" style="margin: 0 0 6px;padding: 0;color: #444444;font-size: 14px !important;font-weight: 700;line-height: 1;">Andy Tran</h2>
+			<h3 class="at-floating-card__sub-title"  style="margin: 0 0 6px;padding: 0;color: #999999;font-size: 12px !important;font-weight: 600;">Front-End Website Developer</h3>
+			<p class="at-floating-card__description" style="margin: 0 0 6px;padding: 0;color: #999999;font-size: 12px;line-height: 20px;">I am a passionate Front-End Web Developer that loves to experiment with awesome technology such as React, Redux, Angular, Meteor, TweenMax, and many more!</p>
+		</div>
+	</div>
+	
     <body style="background: rgb(76, 76, 76);">
+		
         <div class="manorBg" style="top: 0px!important;" ng-app="myApp" ng-controller="myCtrl">
             <div class="forestBox">
-                <img src="https://i.loli.net/2021/09/09/46f29cqkOvD7X5l.jpg">
-				
-			
-				<div class="at-floating-card">
-				  <div class="at-floating-card__thumbnail" style="width: 80px;max-width: 80px;min-width: 80px;border: 1px solid #EEEEEE;border-radius: 100%;margin: 0 20px 0 0;padding: 4px;box-sizing: border-box;overflow: hidden;">
-				  
-					<img src="https://i.loli.net/2021/09/12/uC3m8SYisTfXODj.png" alt="image"  style="display: block;width: 100%;max-width: 100%;border-radius: 100%;">
-				  </div>
-				  <div class="at-floating-card__content">
-					<h2 class="at-floating-card__title" style="margin: 0 0 6px;padding: 0;color: #444444;font-size: 14px !important;font-weight: 700;line-height: 1;">Andy Tran</h2>
-					<h3 class="at-floating-card__sub-title"  style="margin: 0 0 6px;padding: 0;color: #999999;font-size: 12px !important;font-weight: 600;">Front-End Website Developer</h3>
-					<p class="at-floating-card__description" style="margin: 0 0 6px;padding: 0;color: #999999;font-size: 12px;line-height: 20px;">I am a passionate Front-End Web Developer that loves to experiment with awesome technology such as React, Redux, Angular, Meteor, TweenMax, and many more!</p>
-				  </div>
-				</div>
-				
-				
+                <img src="https://i.loli.net/2021/09/09/46f29cqkOvD7X5l.jpg">		
 				
                 <div ng-repeat="item in qplist track by $index">
                     <div class="huluBo bottle-fade1" style="{{item.style}}" id="bottle{{$index+1}}"
