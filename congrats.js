@@ -8,6 +8,7 @@ $(function() {
 	}	
 
 	animateText();
+	animateText2();
 	
 	animateBlobs();
 });
@@ -36,7 +37,16 @@ function animateText() {
 		ease: Back.easeOut.config(4),
 	});
 }
-	
+
+function animateText2() {
+		TweenMax.from($('h2'), 0.8, {
+		scale: 0.4,
+		opacity: 0,
+		rotation: 15,
+		ease: Back.easeOut.config(4),
+	});
+}
+
 function animateBlobs() {
 	
 	var xSeed = _.random(350, 380);
